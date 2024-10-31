@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex's Simple Writer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Alex's Simple Writer</h1>
+        <p class="subtitle">Generate SEO-optimized articles with AI</p>
+
+        <div class="input-group">
+            <label>
+                <span class="icon">🔑</span>
+                <input type="password" id="apiKey" placeholder="OpenRouter API Key" class="input-field">
+            </label>
+        </div>
+
+        <div class="input-group">
+            <label>
+                <span class="icon">🤖</span>
+                <select id="modelSelect" class="input-field">
+                    <option value="">Select a model</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="input-group">
+            <label>
+                <span class="icon">🔍</span>
+                <input type="text" id="mainKeyword" placeholder="Enter the main topic or keyword for your article" class="input-field">
+            </label>
+        </div>
+
+        <div class="input-group">
+            <label>
+                <span class="icon">📝</span>
+                <textarea id="backgroundInfo" placeholder="Optional: Paste any background information, research, or specific points you want to include in the article (50,000 characters max)" class="input-field textarea" maxlength="50000"></textarea>
+            </label>
+            <div class="char-count"><span id="charCount">0</span>/50,000 characters</div>
+        </div>
+
+        <div class="buttons">
+            <button id="generateOutline" class="button outline-btn">
+                <span class="icon">📋</span> Generate Outline
+            </button>
+            <button id="writeArticle" class="button article-btn">
+                <span class="icon">✍️</span> Write Article
+            </button>
+        </div>
+
+        <div class="output-section">
+            <div class="output-container">
+                <h2>Generated Outline</h2>
+                <div id="outlineOutput" class="output-content"></div>
+            </div>
+            
+            <div class="output-container">
+                <h2>
+                    Generated Article
+                    <button id="copyArticle" class="copy-btn">Copy to Clipboard</button>
+                </h2>
+                <div id="articleOutput" class="output-content"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
