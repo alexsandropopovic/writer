@@ -76,7 +76,7 @@ async function generateOutline() {
         
         const prompt = `Based on the main keyword "${mainKeywordInput.value}"${
             backgroundInfoInput.value ? ` and the following background information:\n\n${backgroundInfoInput.value}\n\n` : ', '
-        }generate an SEO-optimized outline that perfectly and directly addresses the search intent of a user searching for the main keyword, adds no fluff and is concise and to the point.`;
+        }generate an SEO-optimized outline that perfectly and directly addresses the search intent of a user searching for the main keyword, adds no fluff and is concise and to the point. Alvways use brazilian portuguese language`;
 
         outlineOutput.innerHTML = 'Generating outline...';
         const response = await makeOpenRouterRequest(prompt);
